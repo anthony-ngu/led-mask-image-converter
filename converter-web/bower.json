@@ -1,0 +1,20 @@
+{
+  "name": "led-mask-image-converter",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Anthony Ngu"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/anthony-ngu/led-mask-image-converter",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}

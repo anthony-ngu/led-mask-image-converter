@@ -1,0 +1,38 @@
+﻿<Window x:Class="LEDMaskImageConverter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LEDMaskImageConverter"
+        mc:Ignorable="d"
+        Title="LED Mask Image Converter" Height="500" Width="500">
+    <Grid Background="DarkGray">
+        <Grid.ColumnDefinitions>
+            
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="248*"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center">
+            <TextBox x:Name="SourceImageFileTextBox" Width="400" Margin="0,5,0,5"></TextBox>
+            <Button x:Name="SourceImageFileDialogButton" FontFamily="Segoe MDL2 Assets" Width="20" Height="20" Margin="10,0,0,0" Click="SourceImageFileDialogButton_Click">&#xE8E5;</Button>
+        </StackPanel>
+        <StackPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center">
+            <TextBox x:Name="DestinationImageFileTextBox" Width="400" Margin="0,5,0,5"></TextBox>
+            <Button x:Name="DestinationImageFileDialogButton" FontFamily="Segoe MDL2 Assets" Width="20" Height="20" Margin="10,0,0,0" Click="SourceImageFileDialogButton_Click">&#xE8E5;</Button>
+        </StackPanel>
+        <TextBlock Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" FontFamily="Segoe MDL2 Assets" HorizontalAlignment="Center" VerticalAlignment="Center">&#xE895;</TextBlock>
+        <Image Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="1" Margin="10,10,10,10" x:Name="SourceImage"></Image>
+        <Image Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="1" Margin="10,10,10,10" x:Name="ResultImage"></Image>
+        <Button Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" x:Name="ConvertImageButton" Click="ConvertImageButton_Click">Convert</Button>
+        <Button Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" x:Name="GetCodeButton" Click="GetCodeButton_Click">Get Code for Converted Image</Button>
+    </Grid>
+</Window>
